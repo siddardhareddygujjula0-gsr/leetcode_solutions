@@ -1,17 +1,17 @@
 class Solution:
-    def reverseVowels(self, s: str) -> str:
+    def reverseVowels(self, st: str) -> str:
         vow=[]
-        for i in range(len(s)):
-            if s[i] in "AEIOUaeiou":
-                vow.append(s[i])
+        for i in range(len(st)):
+            if st[i] in "AEIOUaeiou":
+                vow.append(st[i])
         vow.reverse()
         ans=""
         c=-1
-        for i in range(len(s)):
-            if s[i] in "AEIOUaeiou":
+        for i in range(len(st)):
+            if st[i] in "AEIOUaeiou":
                 c+=1
                 ans+=vow[c]
             else:
-                ans+=s[i]
+                ans+=st[i]
         return ans
         
